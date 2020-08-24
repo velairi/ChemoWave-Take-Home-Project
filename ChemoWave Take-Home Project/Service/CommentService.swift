@@ -10,17 +10,20 @@ import Foundation
 
 class CommentService {
 
-    class func fetchComments(_ permalink: String) {
+    class func fetchComments(_ permalink: String, completion: @escaping ([CommentChild]) -> Void) {
         guard let url = URL(string: updateURL(permalink)) else { return }
-        print("MY COMMENT URL IS:", url)
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             do {
                 let jsonDecoder = JSONDecoder()
-                let object = try jsonDecoder.decode([Comment].self, from: data)
-                print(object)
+                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                let object = try jsonDecoder.decode([CommentElement].self, from: data)
+                for element in object {
+                    let commentChild = element.data.children
+                    completion(commentChild)
+                }
             } catch {
-                print("ERROR", error)
+                print("COMMENT ERROR", error)
             }
         }.resume()
     }

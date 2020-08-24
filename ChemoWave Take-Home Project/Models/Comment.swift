@@ -8,34 +8,49 @@
 
 import Foundation
 
-struct Comment: Decodable {
-    var commentData: [CommentData]
+// MARK: - CommentElement
+struct CommentElement: Decodable {
+    let data: CommentData
 }
 
+// MARK: - CommentData
 struct CommentData: Decodable {
-    var children: Children
+    let modhash: String
+    let dist: Int?
+    let children: [CommentChild]
 }
 
-struct Children: Decodable {
-    var childrenData: [ChildrenData]
+// MARK: - CommentChild
+struct CommentChild: Decodable {
+    let data: ChildData
 }
 
-struct ChildrenData: Decodable {
-    var childData: ChildData
-}
-
+// MARK: - ChildData
 struct ChildData: Decodable {
-    var body: String
+    let body: String?
 }
 
-extension Comment {
+extension CommentElement {
     enum CodingKeys: String, CodingKey {
-        case commentData = "data"
+        case data = "data"
     }
 }
 
-extension Children {
+extension CommentData {
     enum CodingKeys: String, CodingKey {
-        case childrenData = "children"
+        case modhash, dist, children = "children"
     }
 }
+
+extension CommentChild {
+    enum CodingKeys: String, CodingKey {
+        case data = "data"
+    }
+}
+
+extension ChildData {
+    enum CodingKeys: String, CodingKey {
+        case body = "body"
+    }
+}
+

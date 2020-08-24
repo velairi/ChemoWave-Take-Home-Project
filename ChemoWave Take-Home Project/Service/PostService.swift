@@ -20,7 +20,7 @@ class PostService {
                 let children = jsonObject.data.children
                 completion(children)
             } catch {
-                print("Error", error)
+                print("POST ERROR", error)
             }
         }.resume()
     }

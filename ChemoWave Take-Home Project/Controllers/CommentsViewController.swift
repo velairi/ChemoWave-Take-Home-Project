@@ -11,6 +11,7 @@ import UIKit
 class CommentsViewController: UIViewController {
 
     var permalink: String
+    var comments = [String?]()
 
     init(_ permalink: String) {
         self.permalink = permalink
@@ -26,21 +27,32 @@ class CommentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Comments"
-        CommentService.fetchComments(permalink)
         tableView.dataSource = self
-        print("This is the permalink I was initialized with when a user click on a post: ", permalink)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        CommentService.fetchComments(permalink) { [weak self] commentChildren in
+            self?.comments = commentChildren.map { $0.data.body }
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
     }
 }
 
 extension CommentsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return comments.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.separatorInset = .zero
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 0
+        cell.selectionStyle = .none
+        cell.textLabel?.text = comments[indexPath.row]
         return cell
     }
 }
