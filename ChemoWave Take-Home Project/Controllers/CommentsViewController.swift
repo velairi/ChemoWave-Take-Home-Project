@@ -49,6 +49,7 @@ extension CommentsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.separatorInset = .zero
+        cell.textLabel?.font = UIFont(name: "Verdana", size: 15)
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 0
         cell.selectionStyle = .none

@@ -40,6 +40,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.separatorInset = .zero
+        cell.textLabel?.font = UIFont(name: "Verdana", size: 20)
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = titles[indexPath.row]
         cell.imageView?.image = getImage(thumbnails[indexPath.row])
         return cell
