@@ -18,6 +18,7 @@
 		8C293FF824EF4E6C0037073C /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C293FF724EF4E6C0037073C /* PostService.swift */; };
 		8C293FFE24EF62CA0037073C /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C293FFC24EF62CA0037073C /* CommentsViewController.swift */; };
 		8C293FFF24EF62CA0037073C /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C293FFD24EF62CA0037073C /* CommentsViewController.xib */; };
+		8C29402624F085F20037073C /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29402524F085F20037073C /* CommentService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8C293FF724EF4E6C0037073C /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		8C293FFC24EF62CA0037073C /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		8C293FFD24EF62CA0037073C /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
+		8C29402524F085F20037073C /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				8C293FDB24EF4A270037073C /* AppDelegate.swift */,
 				8C293FFB24EF4E8C0037073C /* Controllers */,
 				8C293FFA24EF4E820037073C /* Models */,
+				8C29400024EF83800037073C /* View Models */,
 				8C293FF924EF4E740037073C /* Service */,
 				8C293FE124EF4A270037073C /* Main.storyboard */,
 				8C293FE424EF4A290037073C /* Assets.xcassets */,
@@ -82,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				8C293FF724EF4E6C0037073C /* PostService.swift */,
+				8C29402524F085F20037073C /* CommentService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -104,6 +108,13 @@
 				8C293FFD24EF62CA0037073C /* CommentsViewController.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8C29400024EF83800037073C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				8C293FDC24EF4A270037073C /* AppDelegate.swift in Sources */,
 				8C293FF124EF4CBE0037073C /* HomeViewController.swift in Sources */,
 				8C293FF624EF4D570037073C /* Comment.swift in Sources */,
+				8C29402624F085F20037073C /* CommentService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

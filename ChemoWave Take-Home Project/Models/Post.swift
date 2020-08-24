@@ -23,4 +23,5 @@ struct Child: Decodable {
 struct Post: Decodable {
     var title: String
     var thumbnail: String
+    var permalink: String
 }

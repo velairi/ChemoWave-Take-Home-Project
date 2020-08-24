@@ -8,6 +8,34 @@
 
 import Foundation
 
+struct Comment: Decodable {
+    var commentData: [CommentData]
+}
 
+struct CommentData: Decodable {
+    var children: Children
+}
 
+struct Children: Decodable {
+    var childrenData: [ChildrenData]
+}
 
+struct ChildrenData: Decodable {
+    var childData: ChildData
+}
+
+struct ChildData: Decodable {
+    var body: String
+}
+
+extension Comment {
+    enum CodingKeys: String, CodingKey {
+        case commentData = "data"
+    }
+}
+
+extension Children {
+    enum CodingKeys: String, CodingKey {
+        case childrenData = "children"
+    }
+}

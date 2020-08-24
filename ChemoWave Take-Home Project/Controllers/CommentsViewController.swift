@@ -10,12 +10,25 @@ import UIKit
 
 class CommentsViewController: UIViewController {
 
+    var permalink: String
+
+    init(_ permalink: String) {
+        self.permalink = permalink
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Comments"
+        CommentService.fetchComments(permalink)
         tableView.dataSource = self
+        print("This is the permalink I was initialized with when a user click on a post: ", permalink)
     }
 }
 

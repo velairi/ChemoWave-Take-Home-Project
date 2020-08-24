@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     var titles = [String]()
     var thumbnails = [String]()
+    var permalinks = [String]()
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController {
         PostService.fetchData() { [weak self] children in
             self?.titles = children.map { $0.data.title }
             self?.thumbnails = children.map { $0.data.thumbnail }
+            self?.permalinks = children.map { $0.data.permalink }
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
@@ -44,7 +46,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = CommentsViewController()
+        let vc = CommentsViewController(permalinks[indexPath.row])
         navigationController?.pushViewController(vc, animated: true)
     }
 
