@@ -15,8 +15,6 @@ struct CommentElement: Decodable {
 
 // MARK: - CommentData
 struct CommentData: Decodable {
-    let modhash: String
-    let dist: Int?
     let children: [CommentChild]
 }
 
@@ -38,7 +36,7 @@ extension CommentElement {
 
 extension CommentData {
     enum CodingKeys: String, CodingKey {
-        case modhash, dist, children = "children"
+        case children = "children"
     }
 }
 
