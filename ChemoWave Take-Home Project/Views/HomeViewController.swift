@@ -41,7 +41,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = CommentsViewController(postViewModel.permalinks[indexPath.row])
+        let postTitle = postViewModel.titles[indexPath.row]
+        let postImage = postViewModel.thumbnailImages[indexPath.row]
+        let vc = CommentsViewController(postViewModel.permalinks[indexPath.row], postTitle, postImage)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -12,9 +12,13 @@ class CommentsViewController: UIViewController {
 
     var commentViewModel = CommentViewModel()
     var permalink: String
+    var postTitle: String
+    var postImage: UIImage?
 
-    init(_ permalink: String) {
+    init(_ permalink: String, _ postTitle: String, _ postImage: UIImage?) {
         self.permalink = permalink
+        self.postTitle = postTitle
+        self.postImage = postImage
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -26,7 +30,7 @@ class CommentsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Comments"
+        navigationItem.title = "Post"
         tableView.dataSource = self
     }
 
@@ -45,6 +49,6 @@ extension CommentsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return commentViewModel.getCommentCell(commentViewModel.comments[indexPath.row])
+        return commentViewModel.getCommentCell(commentViewModel.comments, indexPath, postTitle, postImage)
     }
 }
