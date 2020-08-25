@@ -26,6 +26,7 @@ class CommentViewModel {
             topCell.textLabel?.font = UIFont(name: "Verdana", size: 20)
             topCell.textLabel?.lineBreakMode = .byWordWrapping
             topCell.textLabel?.numberOfLines = 0
+            topCell.selectionStyle = .none
             topCell.textLabel?.text = postTitle
             topCell.imageView?.image = postImage
             return topCell
@@ -35,6 +36,7 @@ class CommentViewModel {
             secondCell.textLabel?.font = UIFont(name: "Verdana-Bold", size: 17)
             secondCell.textLabel?.lineBreakMode = .byWordWrapping
             secondCell.textLabel?.numberOfLines = 0
+            secondCell.selectionStyle = .none
             secondCell.textLabel?.text = "Comments"
             return secondCell
         }
@@ -43,7 +45,7 @@ class CommentViewModel {
         cell.textLabel?.font = UIFont(name: "Verdana", size: 15)
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 0
-        cell.selectionStyle = .none
+        cell.selectionStyle = .none 
         cell.textLabel?.text = comments[indexPath.row]
         return cell
     }
