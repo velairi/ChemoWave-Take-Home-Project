@@ -100,7 +100,6 @@
 				8C293FFA24EF4E820037073C /* Models */,
 				8C29400024EF83800037073C /* View Models */,
 				8C293FF924EF4E740037073C /* Service */,
-				8C83EE9624F4A6D2006F52C7 /* Tests */,
 				8C293FE124EF4A270037073C /* Main.storyboard */,
 				8C293FE424EF4A290037073C /* Assets.xcassets */,
 				8C293FE624EF4A290037073C /* LaunchScreen.storyboard */,
@@ -145,13 +144,6 @@
 				8C83EE9424F46179006F52C7 /* CommentViewModel.swift */,
 			);
 			path = "View Models";
-			sourceTree = "<group>";
-		};
-		8C83EE9624F4A6D2006F52C7 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		8C83EEAE24F4A7D4006F52C7 /* ChemoWave Take-Home ProjectTests */ = {
