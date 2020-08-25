@@ -23,9 +23,9 @@ class HomeViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        postViewModel.fetchPosts() {
+        postViewModel.fetchPosts() { [weak self] in
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             }
         }
     }
@@ -37,14 +37,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.separatorInset = .zero
-        cell.textLabel?.font = UIFont(name: "Verdana", size: 20)
-        cell.textLabel?.lineBreakMode = .byWordWrapping
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = postViewModel.titles[indexPath.row]
-        cell.imageView?.image = postViewModel.thumbnailImages[indexPath.row]
-        return cell
+        return postViewModel.getPostCell(postViewModel, indexPath)
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

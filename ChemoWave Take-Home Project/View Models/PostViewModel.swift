@@ -37,4 +37,15 @@ class PostViewModel {
         }
         return image
     }
+
+    func getPostCell(_ postViewModel: PostViewModel, _ indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.separatorInset = .zero
+        cell.textLabel?.font = UIFont(name: "Verdana", size: 20)
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.text = postViewModel.titles[indexPath.row]
+        cell.imageView?.image = postViewModel.thumbnailImages[indexPath.row]
+        return cell
+    }
 }
