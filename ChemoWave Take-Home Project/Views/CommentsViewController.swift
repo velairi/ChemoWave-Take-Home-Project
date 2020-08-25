@@ -10,8 +10,8 @@ import UIKit
 
 class CommentsViewController: UIViewController {
 
+    var commentViewModel = CommentViewModel()
     var permalink: String
-    var comments = [String?]()
 
     init(_ permalink: String) {
         self.permalink = permalink
@@ -31,8 +31,7 @@ class CommentsViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        CommentService.fetchComments(permalink) { [weak self] commentChildren in
-            self?.comments = commentChildren.map { $0.data.body }
+        commentViewModel.fetchComments(permalink) { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
@@ -43,17 +42,10 @@ class CommentsViewController: UIViewController {
 extension CommentsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comments.count
+        return commentViewModel.comments.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.separatorInset = .zero
-        cell.textLabel?.font = UIFont(name: "Verdana", size: 15)
-        cell.textLabel?.lineBreakMode = .byWordWrapping
-        cell.textLabel?.numberOfLines = 0
-        cell.selectionStyle = .none
-        cell.textLabel?.text = comments[indexPath.row]
-        return cell
+        return commentViewModel.getCommentCell(commentViewModel.comments[indexPath.row])
     }
 }
