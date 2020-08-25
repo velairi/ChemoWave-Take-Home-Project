@@ -19,6 +19,8 @@
 		8C293FFE24EF62CA0037073C /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C293FFC24EF62CA0037073C /* CommentsViewController.swift */; };
 		8C293FFF24EF62CA0037073C /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C293FFD24EF62CA0037073C /* CommentsViewController.xib */; };
 		8C29402624F085F20037073C /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29402524F085F20037073C /* CommentService.swift */; };
+		8C83EE9324F4616F006F52C7 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83EE9224F4616F006F52C7 /* PostViewModel.swift */; };
+		8C83EE9524F46179006F52C7 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83EE9424F46179006F52C7 /* CommentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		8C293FFC24EF62CA0037073C /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		8C293FFD24EF62CA0037073C /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
 		8C29402524F085F20037073C /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		8C83EE9224F4616F006F52C7 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		8C83EE9424F46179006F52C7 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				8C293FDB24EF4A270037073C /* AppDelegate.swift */,
-				8C293FFB24EF4E8C0037073C /* Controllers */,
+				8C293FFB24EF4E8C0037073C /* Views */,
 				8C293FFA24EF4E820037073C /* Models */,
 				8C29400024EF83800037073C /* View Models */,
 				8C293FF924EF4E740037073C /* Service */,
@@ -99,7 +103,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8C293FFB24EF4E8C0037073C /* Controllers */ = {
+		8C293FFB24EF4E8C0037073C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8C293FEF24EF4CBE0037073C /* HomeViewController.swift */,
@@ -107,12 +111,14 @@
 				8C293FFC24EF62CA0037073C /* CommentsViewController.swift */,
 				8C293FFD24EF62CA0037073C /* CommentsViewController.xib */,
 			);
-			path = Controllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8C29400024EF83800037073C /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				8C83EE9224F4616F006F52C7 /* PostViewModel.swift */,
+				8C83EE9424F46179006F52C7 /* CommentViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C83EE9524F46179006F52C7 /* CommentViewModel.swift in Sources */,
+				8C83EE9324F4616F006F52C7 /* PostViewModel.swift in Sources */,
 				8C293FF824EF4E6C0037073C /* PostService.swift in Sources */,
 				8C293FF424EF4D4E0037073C /* Post.swift in Sources */,
 				8C293FFE24EF62CA0037073C /* CommentsViewController.swift in Sources */,
