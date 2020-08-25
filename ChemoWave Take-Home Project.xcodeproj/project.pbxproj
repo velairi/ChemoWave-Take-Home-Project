@@ -21,7 +21,18 @@
 		8C29402624F085F20037073C /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29402524F085F20037073C /* CommentService.swift */; };
 		8C83EE9324F4616F006F52C7 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83EE9224F4616F006F52C7 /* PostViewModel.swift */; };
 		8C83EE9524F46179006F52C7 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83EE9424F46179006F52C7 /* CommentViewModel.swift */; };
+		8C83EEB024F4A7D4006F52C7 /* ChemoWave_Take_Home_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83EEAF24F4A7D4006F52C7 /* ChemoWave_Take_Home_ProjectTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C83EEB224F4A7D4006F52C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C293FD024EF4A270037073C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C293FD724EF4A270037073C;
+			remoteInfo = "ChemoWave Take-Home Project";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8C293FD824EF4A270037073C /* ChemoWave Take-Home Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChemoWave Take-Home Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,10 +51,20 @@
 		8C29402524F085F20037073C /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		8C83EE9224F4616F006F52C7 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		8C83EE9424F46179006F52C7 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		8C83EEAD24F4A7D4006F52C7 /* ChemoWave Take-Home ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ChemoWave Take-Home ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C83EEAF24F4A7D4006F52C7 /* ChemoWave_Take_Home_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemoWave_Take_Home_ProjectTests.swift; sourceTree = "<group>"; };
+		8C83EEB124F4A7D4006F52C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8C293FD524EF4A270037073C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C83EEAA24F4A7D4006F52C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				8C293FDA24EF4A270037073C /* ChemoWave Take-Home Project */,
+				8C83EEAE24F4A7D4006F52C7 /* ChemoWave Take-Home ProjectTests */,
 				8C293FD924EF4A270037073C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				8C293FD824EF4A270037073C /* ChemoWave Take-Home Project.app */,
+				8C83EEAD24F4A7D4006F52C7 /* ChemoWave Take-Home ProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +100,7 @@
 				8C293FFA24EF4E820037073C /* Models */,
 				8C29400024EF83800037073C /* View Models */,
 				8C293FF924EF4E740037073C /* Service */,
+				8C83EE9624F4A6D2006F52C7 /* Tests */,
 				8C293FE124EF4A270037073C /* Main.storyboard */,
 				8C293FE424EF4A290037073C /* Assets.xcassets */,
 				8C293FE624EF4A290037073C /* LaunchScreen.storyboard */,
@@ -123,6 +147,22 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
+		8C83EE9624F4A6D2006F52C7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		8C83EEAE24F4A7D4006F52C7 /* ChemoWave Take-Home ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C83EEAF24F4A7D4006F52C7 /* ChemoWave_Take_Home_ProjectTests.swift */,
+				8C83EEB124F4A7D4006F52C7 /* Info.plist */,
+			);
+			path = "ChemoWave Take-Home ProjectTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +183,24 @@
 			productReference = 8C293FD824EF4A270037073C /* ChemoWave Take-Home Project.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8C83EEAC24F4A7D4006F52C7 /* ChemoWave Take-Home ProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C83EEB424F4A7D4006F52C7 /* Build configuration list for PBXNativeTarget "ChemoWave Take-Home ProjectTests" */;
+			buildPhases = (
+				8C83EEA924F4A7D4006F52C7 /* Sources */,
+				8C83EEAA24F4A7D4006F52C7 /* Frameworks */,
+				8C83EEAB24F4A7D4006F52C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C83EEB324F4A7D4006F52C7 /* PBXTargetDependency */,
+			);
+			name = "ChemoWave Take-Home ProjectTests";
+			productName = "ChemoWave Take-Home ProjectTests";
+			productReference = 8C83EEAD24F4A7D4006F52C7 /* ChemoWave Take-Home ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +213,10 @@
 				TargetAttributes = {
 					8C293FD724EF4A270037073C = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					8C83EEAC24F4A7D4006F52C7 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8C293FD724EF4A270037073C;
 					};
 				};
 			};
@@ -172,6 +234,7 @@
 			projectRoot = "";
 			targets = (
 				8C293FD724EF4A270037073C /* ChemoWave Take-Home Project */,
+				8C83EEAC24F4A7D4006F52C7 /* ChemoWave Take-Home ProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +249,13 @@
 				8C293FE524EF4A290037073C /* Assets.xcassets in Resources */,
 				8C293FE324EF4A270037073C /* Main.storyboard in Resources */,
 				8C293FF224EF4CBE0037073C /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C83EEAB24F4A7D4006F52C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +278,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C83EEA924F4A7D4006F52C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C83EEB024F4A7D4006F52C7 /* ChemoWave_Take_Home_ProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C83EEB324F4A7D4006F52C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C293FD724EF4A270037073C /* ChemoWave Take-Home Project */;
+			targetProxy = 8C83EEB224F4A7D4006F52C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8C293FE124EF4A270037073C /* Main.storyboard */ = {
@@ -380,6 +466,46 @@
 			};
 			name = Release;
 		};
+		8C83EEB524F4A7D4006F52C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 445RAN3N26;
+				INFOPLIST_FILE = "ChemoWave Take-Home ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ValerieDon.ChemoWave-Take-Home-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChemoWave Take-Home Project.app/ChemoWave Take-Home Project";
+			};
+			name = Debug;
+		};
+		8C83EEB624F4A7D4006F52C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 445RAN3N26;
+				INFOPLIST_FILE = "ChemoWave Take-Home ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ValerieDon.ChemoWave-Take-Home-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChemoWave Take-Home Project.app/ChemoWave Take-Home Project";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -397,6 +523,15 @@
 			buildConfigurations = (
 				8C293FED24EF4A290037073C /* Debug */,
 				8C293FEE24EF4A290037073C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C83EEB424F4A7D4006F52C7 /* Build configuration list for PBXNativeTarget "ChemoWave Take-Home ProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C83EEB524F4A7D4006F52C7 /* Debug */,
+				8C83EEB624F4A7D4006F52C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

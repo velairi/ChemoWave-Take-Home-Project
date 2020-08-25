@@ -40,7 +40,6 @@ class CommentsViewController: UIViewController {
 }
 
 extension CommentsViewController: UITableViewDataSource {
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return commentViewModel.comments.count
     }
