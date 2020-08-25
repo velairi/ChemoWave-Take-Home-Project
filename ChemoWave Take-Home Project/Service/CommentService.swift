@@ -28,6 +28,7 @@ class CommentService {
         }.resume()
     }
 
+    //Removes the last slash and adds ".json" to the URL
     class func updateURL(_ permalink: String) -> String {
         var permalinkCopy = permalink
         permalinkCopy = String(permalinkCopy.dropLast())
